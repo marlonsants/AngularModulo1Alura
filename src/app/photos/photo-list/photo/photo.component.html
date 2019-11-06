@@ -1,0 +1,14 @@
+<div class="text text-muted text-center mt-4" *ngIf="!photos.length">
+    <h2> Não ha fotos para serem exibidas</h2>
+</div>
+<ol>
+    <li class=" list-unstyled row" *ngFor="let cols of rows">
+        <div *ngFor="let photo of cols" [ngClass]="colWith">
+            <p class="text-center">
+                {{photo.description}}
+            </p>
+            <ap-photos [url]="photo.url" [description]="photo.description">
+            </ap-photos>
+        </div>
+    </li>
+</ol>

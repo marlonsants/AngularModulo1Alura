@@ -1,0 +1,8 @@
+<div class="row center-block mt-3 mb-3">
+    <div class="col-3 offset-md-4">
+        <input type="search" class="form-control" (keyup)="debounce.next($event.target.value)" autofocus>
+    </div>
+
+</div>
+
+<ap-photo [photos]="photos | filterByDescription: filter" col-width="col-3" cols-by-row="4"></ap-photo>
